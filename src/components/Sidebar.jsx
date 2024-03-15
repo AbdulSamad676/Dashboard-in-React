@@ -22,7 +22,7 @@ function Sidebar() {
 			<div className='grid grid-cols-1 md:grid-cols-2 gap-3 mb-10'>
 				<div className='icons p-2 '>
 					<FontAwesomeIcon
-						className='text-3xl lg:text-2xl'
+						className='text-3xl lg:text-lg'
 						icon={faTableCellsLarge}
 					/>
 					<p className='text-xs hidden lg:block  font-thin'>
@@ -31,21 +31,21 @@ function Sidebar() {
 				</div>
 				<div className='icons p-2'>
 					<FontAwesomeIcon
-						className='text-3xl lg:text-2xl'
+						className='text-3xl lg:text-lg'
 						icon={faMessage}
 					/>
 					<p className='text-xs hidden lg:block  font-thin'>Chat</p>
 				</div>
 				<div className='icons p-2'>
 					<FontAwesomeIcon
-						className='text-3xl lg:text-2xl'
+						className='text-3xl lg:text-lg'
 						icon={faUser}
 					/>
 					<p className='text-xs hidden lg:block  font-thin'>Help</p>
 				</div>
 				<div className='icons p-2'>
 					<FontAwesomeIcon
-						className='text-3xl lg:text-2xl'
+						className='text-3xl lg:text-lg'
 						icon={faCircleQuestion}
 					/>
 					<p className='text-xs hidden lg:block  font-thin'>Help</p>
