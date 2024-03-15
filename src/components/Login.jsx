@@ -1,11 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Login() {
+	const navigate = useNavigate();
+
+	function handleLogin() {
+		navigate('/dashboard');
+	}
 	return (
-		<div className=' w-full md:w-9/12 sm:w-10/12  mx-auto '>
+		<div className=' w-10/12 md:w-9/12 sm:w-10/12  mx-auto '>
 			<p className='my-2 text-sm'>Dashboard</p>
 			<h1 className='mb-2 text-xl font-semibold'>Sign In</h1>
 			<div className='flex justify-center items-center w-full md:w-12/12 mx-auto border border-grey-900 rounded-lg p-2'>
@@ -33,7 +39,10 @@ function Login() {
 					id=''
 				/>
 				<p className='text-right underline mb-3'>forget password</p>
-				<button className='bg-primary w-full my-3 py-2 text-white font-bold rounded'>
+				<button
+					className='bg-primary w-full my-3 py-2 text-white font-bold rounded'
+					onClick={handleLogin}
+				>
 					Login
 				</button>
 			</form>

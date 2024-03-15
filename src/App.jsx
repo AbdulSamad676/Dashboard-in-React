@@ -12,7 +12,7 @@ import {
 function App() {
 	return (
 		<>
-			<LoginPage />
+			<h1>I am app file</h1>
 		</>
 	);
 }
