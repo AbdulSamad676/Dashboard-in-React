@@ -1,3 +1,14 @@
 .bg-primary {
 	background-color: #4953cf !important;
 }
+.icons {
+	/* border: 1px solid black; */
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #4953cf !important;
+	background-color: white;
+	border-radius: 0.25rem;
+}
