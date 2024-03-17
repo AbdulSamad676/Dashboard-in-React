@@ -8,7 +8,7 @@ function Dashboard() {
 			loanStatus: 'Total Loan',
 			loanCurrency: 'ZMK',
 			payment: '10000',
-			textColor: 'text-blue-500',
+			textColor: 'text-violet-700',
 		},
 		{
 			loanStatus: 'Paid',
