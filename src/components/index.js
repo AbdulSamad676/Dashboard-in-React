@@ -1,4 +1,4 @@
 import Login from './Login';
-import LoansCard from './UniCard';
+import LoansCard from './LoanCard';
 
 export default { Login, LoansCard };

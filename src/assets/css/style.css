@@ -20,7 +20,8 @@
 }
 /* Header */
 
-.header {
+.secondary-bg {
 	background-color: #ffffff;
 	/* box-shadow: #000000; */
+	box-sizing: border-box !important;
 }

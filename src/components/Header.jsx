@@ -4,7 +4,7 @@ import React from 'react';
 
 function Header() {
 	return (
-		<div className='header w-full grid grid-cols-12 gap-3 drop-shadow-lg px-3 py-2'>
+		<div className='secondary-bg w-full grid grid-cols-12 gap-3 drop-shadow-lg px-3 py-2'>
 			<div className=' font-thin text-blue-700 p-1 rounded col-span-3 md:col-span-2 flex justify-center items-center'>
 				<h2>Dashboard</h2>
 			</div>
