@@ -1,6 +1,8 @@
 import { lazy } from 'react';
 import AuthLayout from '../src/layout/AuthLayout';
 import DashboardLayout from '../src/layout/DashbordLayout';
+import Chat from '../src/pages/Chat';
+import User from '../src/pages/User';
 
 // const Login = lazy(() => import('../pages/auth/login'));
 // const Register = lazy(() => import('../pages/auth/Register'));
@@ -12,6 +14,7 @@ import DashboardLayout from '../src/layout/DashbordLayout';
 // const Profile = lazy(() => import('../pages/profile'));
 import Dashboard from '../src/pages/Dashboard';
 import LoginPage from '../src/pages/LoginPage';
+import Help from '../src/pages/Help';
 // import AuthLayout from '';
 // import DashboardLayout from '../layouts/DashboardLayout';
 
@@ -31,21 +34,21 @@ export const routesConfig = [
 		component: Dashboard,
 		layout: DashboardLayout,
 	},
-	// {
-	// 	path: '/products',
-	// 	component: Products,
-	// 	layout: DashboardLayout,
-	// },
-	// {
-	// 	path: '/users',
-	// 	component: AllUsers,
-	// 	layout: DashboardLayout,
-	// },
-	// {
-	// 	path: '/mapview',
-	// 	component: MapView,
-	// 	layout: DashboardLayout,
-	// },
+	{
+		path: '/chat',
+		component: Chat,
+		layout: DashboardLayout,
+	},
+	{
+		path: '/user',
+		component: User,
+		layout: DashboardLayout,
+	},
+	{
+		path: '/help',
+		component: Help,
+		layout: DashboardLayout,
+	},
 	// {
 	// 	path: '/calender',
 	// 	component: Calender,
