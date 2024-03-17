@@ -1,3 +1,4 @@
 import Login from './Login';
+import LoansCard from './UniCard';
 
-export default { Login };
+export default { Login, LoansCard };
