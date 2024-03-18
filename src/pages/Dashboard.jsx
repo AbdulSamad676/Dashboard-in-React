@@ -1,3 +1,5 @@
+import { faFile } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import LoansCard from '../components/LoanCard';
 
@@ -27,7 +29,17 @@ function Dashboard() {
 				{/* <LoansCard textColor={textColor} />
 				<LoansCard /> */}
 			</div>
-			<div className='uni-row'>universities content</div>
+			<div className='label-row mt-16 mb-5 flex flex-wrap justify-between'>
+				<div className='flex items-center justify-center sm:justify-start w-full sm:w-6/12 md:w-4/12 p-2'>
+					<p className='uppercase text-sm primary p-0 m-0 '>
+						Loan & Scholership
+					</p>
+				</div>
+				<div className='flex items-center justify-center secondary-bg drop-shadow-lg w-full sm:w-6/12 md:w-4/12 p-2'>
+					<FontAwesomeIcon className='primary mr-3' icon={faFile} />
+					<p className='p-0 m-0 text-sm'> Download Statment</p>
+				</div>
+			</div>
 		</div>
 	);
 }
