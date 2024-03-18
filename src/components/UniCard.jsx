@@ -19,7 +19,9 @@ function UniCard({ data }) {
 					<span className='px-2 text-gray-500 '>Closes:</span> {date}
 				</p>
 			</div>
-			<h1 className='my-3 text-xl text-center font-semibold'>{name}</h1>
+			<h1 className='my-3 text-xl text-center font-semibold uppercase'>
+				{name}
+			</h1>
 			<div className='flex justify-between items-center mx-3'>
 				<FontAwesomeIcon
 					className='primary text-xl'

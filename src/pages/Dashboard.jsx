@@ -25,28 +25,28 @@ function Dashboard() {
 		{
 			cardLabel: 'Student Loan',
 			labelBg: 'bg-orange-300',
-			cardBorder: ' border-l-8 border-amber-600',
+			cardBorder: ' border-l-8 border-amber-500',
 			date: '07/01/2021',
 			name: 'Mukuba University',
 		},
 		{
 			cardLabel: 'Schelorship',
 			labelBg: 'bg-green-300',
-			cardBorder: 'border-l-8 border-amber-600',
+			cardBorder: 'border-l-8 border-green-500',
 			date: '09/07/2021',
 			name: 'China Schelorship',
 		},
 		{
 			cardLabel: 'Student Loan',
 			labelBg: 'bg-orange-300',
-			cardBorder: 'border-l-8 border-amber-600',
+			cardBorder: 'border-l-8 border-amber-500',
 			date: '10/12/2021',
 			name: 'University of Zambia',
 		},
 	];
 
 	return (
-		<div className='w-11/12 mx-auto mt-5 border border-black rounded px-2'>
+		<div className='w-11/12 mx-auto mt-10 bg-blue-100  rounded-lg p-2'>
 			<div className='loans-row my-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-y-5 sm:gap-y-0 sm:gap-x-5 w-full sm:w-10/12 box-border '>
 				{loanData?.map(item => {
 					return <LoansCard key={item.key} data={item} />;
@@ -55,7 +55,7 @@ function Dashboard() {
 				<LoansCard /> */}
 			</div>
 			<div className='label-row mt-16 mb-5 flex flex-wrap justify-between'>
-				<div className='flex items-center justify-center sm:justify-start w-full sm:w-6/12 md:w-4/12 p-2'>
+				<div className='flex items-center justify-center sm:justify-start w-full sm:w-6/12 md:w-4/12 py-2'>
 					<p className='uppercase text-sm primary p-0 m-0 '>
 						Loan & Scholership
 					</p>
