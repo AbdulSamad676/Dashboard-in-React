@@ -5,7 +5,7 @@ import LoansCard from '../components/LoanCard';
 import UniCard from '../components/UniCard';
 
 function Dashboard() {
-	const textColor = 'text-blue-700';
+	// const textColor = 'text-blue-700';
 	const loanData = [
 		{
 			loanStatus: 'Total Loan',
@@ -18,6 +18,30 @@ function Dashboard() {
 			loanCurrency: 'ZMK',
 			payment: '3000',
 			textColor: 'text-green-500',
+		},
+	];
+
+	const uniData = [
+		{
+			cardLabel: 'Student Loan',
+			labelBg: 'bg-orange-300',
+			cardBorder: ' border-l-8 border-amber-600',
+			date: '07/01/2021',
+			name: 'Mukuba University',
+		},
+		{
+			cardLabel: 'Schelorship',
+			labelBg: 'bg-green-300',
+			cardBorder: 'border-l-8 border-amber-600',
+			date: '09/07/2021',
+			name: 'China Schelorship',
+		},
+		{
+			cardLabel: 'Student Loan',
+			labelBg: 'bg-orange-300',
+			cardBorder: 'border-l-8 border-amber-600',
+			date: '10/12/2021',
+			name: 'University of Zambia',
 		},
 	];
 
@@ -41,8 +65,11 @@ function Dashboard() {
 					<p className='p-0 m-0 text-sm'> Download Statment</p>
 				</div>
 			</div>
-			<div className='my-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-y-5 sm:gap-y-0 sm:gap-x-5 w-full sm:w-11/12 box-border '>
-				<UniCard />
+			<div className='my-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-y-5 sm:gap-y-0 sm:gap-x-5 w-full md:w-11/12 sm:w-12/12 box-border '>
+				{uniData?.map(item => {
+					return <UniCard key={item.key} data={item} />;
+				})}
+
 				{/* <LoansCard textColor={textColor} />
 				<LoansCard /> */}
 			</div>
