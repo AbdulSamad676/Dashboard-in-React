@@ -14,17 +14,21 @@ function Sidebar() {
 	return (
 		<div className='flex flex-col items-center justify-center border border-black h-screen text-white'>
 			<div className='mb-5'>
-				<h1 className='text-3xl text-white font-bold'>HELSB</h1>
+				<h1 className='hidden sm:block text-3xl text-white font-bold'>
+					HELSB
+				</h1>
 			</div>
-			<div className='flex flex-col items-center justify-center mb-5 mt-5'>
+			<div className=' hidden sm:flex flex-col items-center justify-center mb-5 mt-5'>
 				<img src={IMG} alt='' width={100} />
-				<h2 className='text-sm font-semibold my-2'>Abdul Samad Khan</h2>
+				<h2 className='text-sm font-semibold my-2 hidden md:block'>
+					Abdul Samad Khan
+				</h2>
 			</div>
 			<div className='grid grid-cols-1 md:grid-cols-2 gap-3 mb-10'>
 				<Link to='/dashboard'>
 					<div className='icons p-2 '>
 						<FontAwesomeIcon
-							className='text-3xl lg:text-lg'
+							className='text-xl lg:text-lg'
 							icon={faTableCellsLarge}
 						/>
 						<p className='text-xs hidden lg:block  font-thin'>
@@ -35,7 +39,7 @@ function Sidebar() {
 				<Link to='/chat'>
 					<div className='icons p-2'>
 						<FontAwesomeIcon
-							className='text-3xl lg:text-lg'
+							className='text-xl lg:text-lg'
 							icon={faMessage}
 						/>
 						<p className='text-xs hidden lg:block  font-thin'>
@@ -46,7 +50,7 @@ function Sidebar() {
 				<Link to='/user'>
 					<div className='icons p-2'>
 						<FontAwesomeIcon
-							className='text-3xl lg:text-lg'
+							className='text-xl lg:text-lg'
 							icon={faUser}
 						/>
 						<p className='text-xs hidden lg:block  font-thin'>
@@ -57,7 +61,7 @@ function Sidebar() {
 				<Link to='/help'>
 					<div className='icons p-2'>
 						<FontAwesomeIcon
-							className='text-3xl lg:text-lg'
+							className='text-xl lg:text-lg'
 							icon={faCircleQuestion}
 						/>
 						<p className='text-xs hidden lg:block  font-thin'>

@@ -41,7 +41,7 @@ function ChatItem() {
 				<FontAwesomeIcon icon={faMagnifyingGlass} />
 				<p className='mx-3'>Search</p>
 			</div>
-			<div className='single-chat'>
+			<div className='single-chat flex sm:block'>
 				{singleItems?.map(item => {
 					return <SingleChat key={item.k} data={item} />;
 				})}

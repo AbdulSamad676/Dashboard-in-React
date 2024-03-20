@@ -4,12 +4,12 @@ function SingleChat({ data }) {
 	const { profileImg, name, time, message, className } = data;
 	return (
 		<div
-			className={`flex items-start  py-3 px-2 rounded w-full drop-shadow-lg ${className}`}
+			className={`flex items-start p-1 sm:py-3 sm:px-2 mx-1 sm:mx-0 rounded sm:w-full drop-shadow-lg ${className}`}
 		>
-			<div className='mx-3'>
+			<div className='sm:mx-3'>
 				<img src={profileImg} width={50} alt='chat profile' />
 			</div>
-			<div className='px-2 flex flex-col justify-between w-full'>
+			<div className='px-2 hidden sm:flex flex-col justify-between w-full'>
 				<div className='flex justify-between mb-2'>
 					<p className='text-sm'>{name}</p>
 					<p className='text-xs'>{time}</p>
