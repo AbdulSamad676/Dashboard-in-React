@@ -60,6 +60,42 @@ function ChatItem() {
 			className: 'secondary-bg my-2',
 		},
 	];
+
+	const msgsArray = [
+		{
+			text: 'Hi Ahmad How are you?',
+			status: 'send',
+		},
+		{
+			text: 'Hello Jhob I am good! Whats going there?',
+			status: 'receive',
+		},
+		{
+			text: 'Hi Ahmad How are you?',
+			status: 'send',
+		},
+		{
+			text: 'Hello Jhob I am good! Whats going there?',
+			status: 'send',
+		},
+		{
+			text: 'Hi Ahmad How are you?',
+			status: 'receive',
+		},
+		{
+			text: 'Hello Jhob I am good! Whats going there?',
+			status: 'receive',
+		},
+		{
+			text: 'Hi Ahmad How are you?',
+			status: 'send',
+		},
+		{
+			text: 'Hello Jhob I am good! Whats going there?',
+			status: 'receive',
+		},
+	];
+
 	return (
 		<>
 			<div className='border border-black p-1 col-span-12  sm:col-span-5 h-auto sm:h-screen px-3'>
@@ -144,9 +180,34 @@ function ChatItem() {
 				{/* conversation Header End */}
 
 				{/* Chat Body Start */}
-				<div className='chat-body border border-black h-4/6 mt-5'>
-					chat body
+
+				<div className='chat-body border border-black h-4/6 mt-3 px-2 py-1 overflow-auto'>
+					<p className='text-center text-sm text-gray-400'>
+						today <span className='font-semibold'>4:45</span>{' '}
+					</p>
+					{msgsArray?.map(msg => {
+						return (
+							<div
+								className={`w-full ${
+									msg.status === 'send'
+										? 'flex justify-end'
+										: 'flex justify-start'
+								}`}
+							>
+								<div
+									className={`sms w-max max-w-48  my-1 p-1 rounded ${
+										msg.status === 'send'
+											? 'bg-primary text-white'
+											: 'bg-gray-100 text-black'
+									}`}
+								>
+									{msg.text}
+								</div>
+							</div>
+						);
+					})}
 				</div>
+
 				{/* Chat Body End */}
 				<div className='chat-footer border border-black mt-3'>
 					I am footer
