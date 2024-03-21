@@ -28,9 +28,9 @@ const DashboardLayout = ({ children }) => {
 				<Sidebar />
 			</div>
 
-			<main className='flex flex-col col-span-10 h-screen overflow-auto'>
+			<main className=' flex flex-col col-span-10 h-full overflow-auto '>
 				<Header />
-				<div className='w-full'>{children}</div>
+				<div className='w-full '>{children}</div>
 			</main>
 		</div>
 	);

@@ -25,13 +25,21 @@
 	/* box-shadow: #000000; */
 	box-sizing: border-box !important;
 }
-/* .single-chat {
-	height: 90% !important;
-	overflow: auto;
-} */
+.single-chat {
+	height: 20rem;
+}
 .chat-section {
-	height: 93vh !important;
+	height: 91vh !important;
+	/* border: 1px solid black; */
 }
 .chat-body {
-	height: 25.75rem;
+	height: 22rem;
+}
+
+@media screen and (max-width: 575.98px) {
+	/* .chat-section {
+		height: 99vh !important;
+		border: 1px solid black;
+	} */
+	/* CSS rules for screens less than 576 pixels wide */
 }

@@ -124,7 +124,7 @@ function ChatItem() {
 					/>
 					<p className=''>Search</p>
 				</div>
-				<div className='single-chat sm:h-96 overflow-auto flex sm:block px-3'>
+				<div className=' h-auto sm:h-80  overflow-auto flex sm:block px-3'>
 					{singleItems?.map(item => {
 						return (
 							<button
@@ -141,7 +141,7 @@ function ChatItem() {
 			</div>
 			{/* Chat Items Section End */}
 			{/* chat conversation */}
-			<div className=' p-1 col-span-12 sm:col-span-7'>
+			<div className=' p-1 flex flex-col justify-between col-span-12 sm:col-span-7'>
 				{/* conversation Header Start */}
 
 				<div
@@ -185,7 +185,7 @@ function ChatItem() {
 
 				{/* Chat Body Start */}
 
-				<div className='chat-body   mt-3 px-2 py-1 overflow-auto'>
+				<div className='  h-80   mt-3 px-2 py-1 overflow-auto'>
 					<p className='text-center text-sm text-gray-400'>
 						today <span className='font-semibold'>4:45</span>{' '}
 					</p>
