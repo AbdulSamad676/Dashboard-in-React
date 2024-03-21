@@ -24,11 +24,11 @@ const DashboardLayout = ({ children }) => {
 
 	return (
 		<div className='grid grid-cols-12 '>
-			<div className='col-span-2 bg-primary'>
+			<div className='col-span-2 bg-primary h-screen flex justify-center'>
 				<Sidebar />
 			</div>
 
-			<main className='flex flex-col col-span-10'>
+			<main className='flex flex-col col-span-10 h-screen overflow-auto'>
 				<Header />
 				<div className='w-full'>{children}</div>
 			</main>

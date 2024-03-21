@@ -98,7 +98,7 @@ function ChatItem() {
 
 	return (
 		<>
-			<div className='border border-black p-1 col-span-12  sm:col-span-5 h-auto sm:h-screen px-3'>
+			<div className='border border-black p-1 col-span-12  sm:col-span-5 h-max  px-3'>
 				{/* Chat Items Section Start */}
 
 				<div className='flex justify-between px-5 items-center'>
@@ -137,7 +137,7 @@ function ChatItem() {
 			</div>
 			{/* Chat Items Section End */}
 			{/* chat conversation */}
-			<div className='border border-black p-1 col-span-12 sm:col-span-7 h-screen'>
+			<div className='border border-black p-1 col-span-12 sm:col-span-7 h-max'>
 				{/* conversation Header Start */}
 
 				<div

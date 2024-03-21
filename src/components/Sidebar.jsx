@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 import IMG from '../assets/images/profile.png';
 function Sidebar() {
 	return (
-		<div className='flex flex-col items-center justify-center border border-black h-screen text-white'>
+		<div className='flex flex-col items-center justify-center text-white'>
 			<div className='mb-5'>
 				<h1 className='hidden sm:block text-3xl text-white font-bold'>
 					HELSB
