@@ -3,7 +3,7 @@ import ChatItem from '../components/ChatItem';
 
 function Chat() {
 	return (
-		<div className='grid grid-cols-12  rounded'>
+		<div className='chat-section grid grid-cols-12  rounded'>
 			<ChatItem />
 		</div>
 	);

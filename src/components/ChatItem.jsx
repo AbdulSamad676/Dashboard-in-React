@@ -1,8 +1,11 @@
 import {
 	faCirclePlus,
 	faEllipsis,
+	faFaceSmile,
 	faMagnifyingGlass,
+	faMicrophone,
 	faPaperclip,
+	faPaperPlane,
 	faPhone,
 	faVideo,
 } from '@fortawesome/free-solid-svg-icons';
@@ -99,7 +102,7 @@ function ChatItem() {
 
 	return (
 		<>
-			<div className='border border-black p-1 col-span-12  sm:col-span-5 h-screen px-3'>
+			<div className=' p-1 col-span-12  sm:col-span-5 h-auto px-3'>
 				{/* Chat Items Section Start */}
 
 				<div className='flex justify-between px-5 items-center'>
@@ -138,7 +141,7 @@ function ChatItem() {
 			</div>
 			{/* Chat Items Section End */}
 			{/* chat conversation */}
-			<div className='border border-black p-1 col-span-12 sm:col-span-7 h-max'>
+			<div className=' p-1 col-span-12 sm:col-span-7'>
 				{/* conversation Header Start */}
 
 				<div
@@ -182,7 +185,7 @@ function ChatItem() {
 
 				{/* Chat Body Start */}
 
-				<div className='chat-body border border-black  mt-3 px-2 py-1 overflow-auto'>
+				<div className='chat-body   mt-3 px-2 py-1 overflow-auto'>
 					<p className='text-center text-sm text-gray-400'>
 						today <span className='font-semibold'>4:45</span>{' '}
 					</p>
@@ -212,53 +215,39 @@ function ChatItem() {
 				{/* Chat Body End */}
 
 				{/* Chat Footer */}
-				<div className='chat-footer grid grid-cols-12 border border-black mt-3 mx-5 bg-gray-200 '>
-					<div className='col-span-8 flex mx-3 items-center'>
-						<FontAwesomeIcon
-							className='text-sm text-gray-500'
-							icon={faPaperclip}
-						/>
-						<p className='text-xs text-gray-500 mx-2'>
-							Type message Here
-						</p>
+				<div className='chat-footer flex justify-center items-center p-2 drop-shadow-lg secondary-bg'>
+					<div className=' w-full grid grid-cols-12  rounded-lg bg-gray-100 px-3 py-2'>
+						<div className='col-span-9 flex mx-3 items-center '>
+							<FontAwesomeIcon
+								className='text-sm text-gray-500'
+								icon={faPaperclip}
+							/>
+
+							<input
+								className='text-xs text-gray-500 mx-5 w-full bg-transparent border-none outline-none focus:ring-0'
+								placeholder='Type Message Here'
+								type='text'
+							/>
+						</div>
+						<div className='col-span-3 flex justify-end items-center'>
+							<FontAwesomeIcon
+								className='text-sm mx-1 text-gray-500'
+								icon={faFaceSmile}
+							/>
+							<FontAwesomeIcon
+								className='text-sm mx-1 text-gray-500'
+								icon={faMicrophone}
+							/>
+							<FontAwesomeIcon
+								className='text-sm mx-1 text-blue-500'
+								icon={faPaperPlane}
+							/>
+						</div>
 					</div>
-					<div className='col-span-4'>icons</div>
 				</div>
 				{/* Chat Footer  End*/}
 			</div>
 		</>
-		// <div className='chat-item'>
-		// 	<div className='flex justify-between px-5 items-center'>
-		// 		<p>Chats</p>
-		// 		<FontAwesomeIcon
-		// 			className='primary text-xl'
-		// 			icon={faCirclePlus}
-		// 		/>
-		// 	</div>
-		// 	<div className='flex justify-between m-5 text-sm font-thin'>
-		// 		<button className='focus:text-blue-500'>Direct</button>
-		// 		<button className='focus:text-blue-500'>Departments</button>
-		// 		<button className='focus:text-blue-500'>Alerts</button>
-		// 	</div>
-		// 	<div className='flex items-center my-3 mx-5 rounded-lg bg-gray-100 px-5 py-1'>
-		// 		<FontAwesomeIcon icon={faMagnifyingGlass} />
-		// 		<p className='mx-3'>Search</p>
-		// 	</div>
-		// 	<div className='single-chat sm:h-96 overflow-auto flex sm:block'>
-		// 		{singleItems?.map(item => {
-		// 			return (
-		// 				<button
-		// 					className='w-full'
-		// 					onClick={() => {
-		// 						alert(`${item.name} clicked`);
-		// 					}}
-		// 				>
-		// 					<SingleChat key={item.k} data={item} />
-		// 				</button>
-		// 			);
-		// 		})}
-		// 	</div>
-		// </div>
 	);
 }
 
