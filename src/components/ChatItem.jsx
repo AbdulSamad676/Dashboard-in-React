@@ -2,6 +2,7 @@ import {
 	faCirclePlus,
 	faEllipsis,
 	faMagnifyingGlass,
+	faPaperclip,
 	faPhone,
 	faVideo,
 } from '@fortawesome/free-solid-svg-icons';
@@ -98,7 +99,7 @@ function ChatItem() {
 
 	return (
 		<>
-			<div className='border border-black p-1 col-span-12  sm:col-span-5 h-max  px-3'>
+			<div className='border border-black p-1 col-span-12  sm:col-span-5 h-screen px-3'>
 				{/* Chat Items Section Start */}
 
 				<div className='flex justify-between px-5 items-center'>
@@ -181,7 +182,7 @@ function ChatItem() {
 
 				{/* Chat Body Start */}
 
-				<div className='chat-body border border-black h-4/6 mt-3 px-2 py-1 overflow-auto'>
+				<div className='chat-body border border-black  mt-3 px-2 py-1 overflow-auto'>
 					<p className='text-center text-sm text-gray-400'>
 						today <span className='font-semibold'>4:45</span>{' '}
 					</p>
@@ -209,9 +210,21 @@ function ChatItem() {
 				</div>
 
 				{/* Chat Body End */}
-				<div className='chat-footer border border-black mt-3'>
-					I am footer
+
+				{/* Chat Footer */}
+				<div className='chat-footer grid grid-cols-12 border border-black mt-3 mx-5 bg-gray-200 '>
+					<div className='col-span-8 flex mx-3 items-center'>
+						<FontAwesomeIcon
+							className='text-sm text-gray-500'
+							icon={faPaperclip}
+						/>
+						<p className='text-xs text-gray-500 mx-2'>
+							Type message Here
+						</p>
+					</div>
+					<div className='col-span-4'>icons</div>
 				</div>
+				{/* Chat Footer  End*/}
 			</div>
 		</>
 		// <div className='chat-item'>
