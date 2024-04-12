@@ -1,13 +1,13 @@
 import {
-	faCirclePlus,
-	faEllipsis,
-	faFaceSmile,
-	faMagnifyingGlass,
-	faMicrophone,
-	faPaperclip,
-	faPaperPlane,
-	faPhone,
-	faVideo,
+  faCirclePlus,
+  faEllipsis,
+  faFaceSmile,
+  faMagnifyingGlass,
+  faMicrophone,
+  faPaperclip,
+  faPaperPlane,
+  faPhone,
+  faVideo,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
@@ -18,133 +18,195 @@ import Img3 from '../assets/images/single3.png';
 import Img4 from '../assets/images/single4.png';
 import Img5 from '../assets/images/single5.png';
 import Img6 from '../assets/images/single6.png';
+import ChatBody from './ChatBody';
+import { useState } from 'react';
 
 function ChatItem() {
-	const singleItems = [
-		{
-			profileImg: Img1,
-			name: 'Alex Bywalya',
-			time: '4:45',
-			message: 'Hello Alex',
-			className: 'bg-primary my-2 text-white',
-		},
-		{
-			profileImg: Img2,
-			name: 'Jay Bandy',
-			time: '4:45',
-			message: 'Are we Meeting today',
-			className: 'secondary-bg my-2',
-		},
-		{
-			profileImg: Img3,
-			name: 'Mike Chalo',
-			time: '4:45',
-			message: 'Are we Meeting today',
-			className: 'secondary-bg my-2',
-		},
-		{
-			profileImg: Img4,
-			name: 'Jordan Mate',
-			time: '4:45',
-			message: 'Are we Meeting today',
-			className: 'secondary-bg my-2',
-		},
-		{
-			profileImg: Img5,
-			name: 'Jani Zulu',
-			time: '4:45',
-			message: 'Are we Meeting today',
-			className: 'secondary-bg my-2',
-		},
-		{
-			profileImg: Img6,
-			name: 'Ranvi Cheelo',
-			time: '4:45',
-			message: 'Are we Meeting today',
-			className: 'secondary-bg my-2',
-		},
-	];
+  const [itemStatus, setItemStatus] = useState(false);
 
-	const msgsArray = [
-		{
-			text: 'Hi Ahmad How are you?',
-			status: 'send',
-		},
-		{
-			text: 'Hello Jhob I am good! Whats going there?',
-			status: 'receive',
-		},
-		{
-			text: 'Hi Ahmad How are you?',
-			status: 'send',
-		},
-		{
-			text: 'Hello Jhob I am good! Whats going there?',
-			status: 'send',
-		},
-		{
-			text: 'Hi Ahmad How are you?',
-			status: 'receive',
-		},
-		{
-			text: 'Hello Jhob I am good! Whats going there?',
-			status: 'receive',
-		},
-		{
-			text: 'Hi Ahmad How are you?',
-			status: 'send',
-		},
-		{
-			text: 'Hello Jhob I am good! Whats going there?',
-			status: 'receive',
-		},
-	];
+  // Handle button click to toggle isActive
+  const handleClick = (index) => {};
 
-	return (
-		<>
-			<div className=' p-1 col-span-12  sm:col-span-5 h-auto px-3'>
-				{/* Chat Items Section Start */}
+  // msgs array
+  const msgs = [
+    {
+      text: 'Hi Ahmad How are you?',
+      status: 'send',
+    },
+    {
+      text: 'Hello Jhob I am good! Whats going there?',
+      status: 'receive',
+    },
+    {
+      text: 'Hi Ahmad How are you?',
+      status: 'send',
+    },
+    {
+      text: 'Hello Jhon I am good! Whats going there?',
+      status: 'send',
+    },
+    {
+      text: 'Hi Ahmad How are you?',
+      status: 'receive',
+    },
+    {
+      text: 'Hello Jhob I am good! Whats going there?',
+      status: 'receive',
+    },
+    {
+      text: 'Hi Ahmad How are you?',
+      status: 'send',
+    },
+    {
+      text: 'Hello Jhob I am good! Whats going there?',
+      status: 'receive',
+    },
+  ];
 
-				<div className='flex justify-between px-5 items-center'>
-					<p>Chats</p>
-					<FontAwesomeIcon
-						className='primary text-xl'
-						icon={faCirclePlus}
-					/>
-				</div>
-				<div className='flex justify-between m-5 text-sm font-thin px-3'>
-					<button className='focus:text-blue-500'>Direct</button>
-					<button className='focus:text-blue-500'>Departments</button>
-					<button className='focus:text-blue-500'>Alerts</button>
-				</div>
-				<div className='flex items-center m-3 rounded-lg bg-gray-100 px-1 py-1'>
-					<FontAwesomeIcon
-						icon={faMagnifyingGlass}
-						className='mx-3'
-					/>
-					<p className=''>Search</p>
-				</div>
-				<div className=' h-auto sm:h-80  overflow-auto flex sm:block px-3'>
-					{singleItems?.map(item => {
-						return (
-							<button
-								className='w-full'
-								onClick={() => {
-									alert(`${item.name} clicked`);
-								}}
-							>
-								<SingleChat key={item.k} data={item} />
-							</button>
-						);
-					})}
-				</div>
-			</div>
-			{/* Chat Items Section End */}
-			{/* chat conversation */}
-			<div className=' p-1 flex flex-col justify-between col-span-12 sm:col-span-7'>
-				{/* conversation Header Start */}
+  const [singleItems, setSingleItems] = useState([
+    {
+      profileImg: Img1,
+      name: 'Alex Bywalya',
+      time: '4:45',
+      message: 'Hello Alex',
+      isActive: false,
+      textArray: msgs,
+    },
+    {
+      profileImg: Img2,
+      name: 'Jay Bandy',
+      time: '4:45',
+      message: 'Are we Meeting today',
+      isActive: false,
+      textArray: msgs,
+    },
 
-				<div
+    // other items omitted for brevity
+  ]);
+
+  // Handle button click to toggle isActive
+  const handleButtonClick = (index) => {
+    setSingleItems((prevItems) =>
+      prevItems.map((item, i) =>
+        i === index ? { ...item, isActive: !item.isActive } : item,
+      ),
+    );
+  };
+
+  //   const singleItems = [
+  //     {
+  //       id: 1,
+  //       profileImg: Img1,
+  //       name: 'Alex Bywalya',
+  //       time: '4:45',
+  //       message: 'Hello Alex',
+  //       isActive: itemStatus,
+  //       //
+  //       textArray: msgs,
+  //       //
+  //     },
+  //     {
+  //       id: 2,
+  //       profileImg: Img2,
+  //       name: 'Jay Bandy',
+  //       time: '4:45',
+  //       message: 'Are we Meeting today',
+
+  //       isActive: itemStatus,
+  //       textArray: msgs,
+  //     },
+  //     {
+  //       id: 3,
+  //       profileImg: Img3,
+  //       name: 'Mike Chalo',
+  //       time: '4:45',
+  //       message: 'Are we Meeting today',
+
+  //       isActive: itemStatus,
+  //       textArray: msgs,
+  //     },
+  //     {
+  //       id: 4,
+  //       profileImg: Img4,
+  //       name: 'Jordan Mate',
+  //       time: '4:45',
+  //       message: 'Are we Meeting today',
+
+  //       isActive: itemStatus,
+  //       textArray: msgs,
+  //     },
+  //     {
+  //       id: 5,
+  //       profileImg: Img5,
+  //       name: 'Jani Zulu',
+  //       time: '4:45',
+  //       message: 'Are we Meeting today',
+
+  //       isActive: itemStatus,
+  //       textArray: msgs,
+  //     },
+  //     {
+  //       id: 6,
+  //       profileImg: Img6,
+  //       name: 'Ranvi Cheelo',
+  //       time: '4:45',
+  //       message: 'Are we Meeting today',
+  //       isActive: itemStatus,
+
+  //       textArray: msgs,
+  //     },
+  //   ];
+
+  return (
+    <>
+      <div className=' p-1 col-span-12  sm:col-span-5 h-auto px-3'>
+        {/* Chat Items Section Start */}
+
+        <div className='flex justify-between px-5 items-center'>
+          <p>Chats</p>
+          <FontAwesomeIcon className='primary text-xl' icon={faCirclePlus} />
+        </div>
+        <div className='flex justify-between m-5 text-sm font-thin px-3'>
+          <button className='focus:text-blue-500'>Direct</button>
+          <button className='focus:text-blue-500'>Departments</button>
+          <button className='focus:text-blue-500'>Alerts</button>
+        </div>
+        <div className='flex items-center m-3 rounded-lg bg-gray-100 px-1 py-1'>
+          <FontAwesomeIcon icon={faMagnifyingGlass} className='mx-3' />
+          <p className=''>Search</p>
+        </div>
+        <div className=' h-auto sm:h-80  overflow-auto flex sm:block px-3'>
+          {singleItems.map((item, index) => (
+            <button
+              key={index}
+              className='w-full'
+              onClick={() => handleButtonClick(index)}
+            >
+              <SingleChat data={item} />
+            </button>
+          ))}
+          {/* old Code */}
+          {/* {singleItems?.map((item) => {
+            return (
+              <button
+                className='w-full'
+                onClick={(index) => {
+                  //   setItemStatus(true);
+                }}
+              >
+                <SingleChat key={item.key} data={item} />
+              </button>
+            );
+          })} */}
+        </div>
+      </div>
+      {/* Chat Items Section End */}
+      {/* chat conversation */}
+      <div className=' p-1 flex flex-col justify-between col-span-12 sm:col-span-7'>
+        <ChatBody data={singleItems[0]} />
+        {/* conversation Header Start */}
+
+        {/* <div
 					className={` conversation-header flex justify-between items-center  p-1 sm:py-1 sm:px-2 mx-1 sm:mx-0 rounded sm:w-full drop-shadow-lg secondary-bg `}
 				>
 					<div className='profile-section w-full flex items-center '>
@@ -179,13 +241,13 @@ function ChatItem() {
 							icon={faEllipsis}
 						/>
 					</div>
-				</div>
+				</div> */}
 
-				{/* conversation Header End */}
+        {/* conversation Header End */}
 
-				{/* Chat Body Start */}
+        {/* Chat Body Start */}
 
-				<div className='  h-80   mt-3 px-2 py-1 overflow-auto'>
+        {/* <div className='  h-80   mt-3 px-2 py-1 overflow-auto'>
 					<p className='text-center text-sm text-gray-400'>
 						today <span className='font-semibold'>4:45</span>{' '}
 					</p>
@@ -210,12 +272,12 @@ function ChatItem() {
 							</div>
 						);
 					})}
-				</div>
+				</div> */}
 
-				{/* Chat Body End */}
+        {/* Chat Body End */}
 
-				{/* Chat Footer */}
-				<div className='chat-footer flex justify-center items-center p-2 drop-shadow-lg secondary-bg'>
+        {/* Chat Footer */}
+        {/* <div className='chat-footer flex justify-center items-center p-2 drop-shadow-lg secondary-bg'>
 					<div className=' w-full grid grid-cols-12  rounded-lg bg-gray-100 px-3 py-2'>
 						<div className='col-span-9 flex mx-3 items-center '>
 							<FontAwesomeIcon
@@ -244,11 +306,11 @@ function ChatItem() {
 							/>
 						</div>
 					</div>
-				</div>
-				{/* Chat Footer  End*/}
-			</div>
-		</>
-	);
+				</div> */}
+        {/* Chat Footer  End*/}
+      </div>
+    </>
+  );
 }
 
 export default ChatItem;
