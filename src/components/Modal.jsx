@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import addUniversity from '../store/Slices/UniversitiesSlice/UniversitiesSlice';
+import { addUniversity } from '../store/Slices/UniversitiesSlice/UniversitiesSlice';
 
 const Modal = ({ closeModal }) => {
   const [formData, setFormData] = useState({

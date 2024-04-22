@@ -14,7 +14,7 @@ const initialState = {
   ],
 };
 
-export const universitiesSlice = createSlice({
+export const UniversitiesSlice = createSlice({
   name: 'universities',
   initialState,
   reducers: {
@@ -35,7 +35,7 @@ export const universitiesSlice = createSlice({
 });
 
 // exporting individual actions through which we can modify
-export const { addUniversity } = universitiesSlice.actions;
+export const { addUniversity } = UniversitiesSlice.actions;
 
 // Exporting all the reducers
-export default universitiesSlice.reducer;
+export default UniversitiesSlice.reducer;
