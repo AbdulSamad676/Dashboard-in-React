@@ -12,7 +12,7 @@ function Dashboard() {
   const [openModal, setOpenModal] = useState(false);
   const reduxData = useSelector((state) => state.uniData);
 
-  console.log('data from redux', reduxData);
+  // console.log('data from redux', reduxData);
 
   function closeModal() {
     setOpenModal(false);
@@ -43,15 +43,15 @@ function Dashboard() {
     },
     {
       cardLabel: 'Schelorship',
-      labelBg: 'bg-green-300',
-      cardBorder: 'border-l-8 border-green-500',
+      labelBg: 'bg-red-300',
+      cardBorder: 'border-l-8 border-red-500',
       date: '09/07/2021',
       name: 'China Schelorship',
     },
     {
       cardLabel: 'Student Loan',
-      labelBg: 'bg-orange-300',
-      cardBorder: 'border-l-8 border-amber-500',
+      labelBg: 'bg-blue-300',
+      cardBorder: 'border-l-8 border-blue-500',
       date: '10/12/2021',
       name: 'University of Zambia',
     },
@@ -78,19 +78,20 @@ function Dashboard() {
         </div>
       </div>
       <div className='my-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-y-5 sm:gap-y-0 sm:gap-x-5 w-full md:w-11/12 sm:w-12/12 box-border '>
-        {reduxData?.map((item) => {
+        {uniData?.map((item) => {
           return <UniCard key={item.key} data={item} />;
         })}
-        <button
-          onClick={() => setOpenModal(true)}
-          className='inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-indigo-600
-         hover:bg-indigo-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-        >
-          add University
-        </button>
+
         {/* <LoansCard textColor={textColor} />
 				<LoansCard /> */}
       </div>
+      <button
+        onClick={() => setOpenModal(true)}
+        className='inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-indigo-600
+         hover:bg-indigo-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+      >
+        add University
+      </button>
       {openModal && <Modal closeModal={closeModal} />}
     </div>
   );
