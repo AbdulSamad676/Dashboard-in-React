@@ -1,11 +1,17 @@
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { useSelector } from 'react-redux';
 import LoansCard from '../components/LoanCard';
 import UniCard from '../components/UniCard';
 
 function Dashboard() {
   // const textColor = 'text-blue-700';
+
+  const reduxData = useSelector((state) => state.uniData);
+
+  console.log('data from redux', reduxData);
+
   const loanData = [
     {
       loanStatus: 'Total Loan',
