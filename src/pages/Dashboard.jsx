@@ -1,16 +1,22 @@
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import LoansCard from '../components/LoanCard';
+import Modal from '../components/Modal';
 import UniCard from '../components/UniCard';
 
 function Dashboard() {
   // const textColor = 'text-blue-700';
-
+  const [openModal, setOpenModal] = useState(false);
   const reduxData = useSelector((state) => state.uniData);
 
   console.log('data from redux', reduxData);
+
+  function closeModal() {
+    setOpenModal(false);
+  }
 
   const loanData = [
     {
@@ -75,10 +81,17 @@ function Dashboard() {
         {uniData?.map((item) => {
           return <UniCard key={item.key} data={item} />;
         })}
-
+        <button
+          onClick={() => setOpenModal(true)}
+          className='inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-indigo-600
+         hover:bg-indigo-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+        >
+          add University
+        </button>
         {/* <LoansCard textColor={textColor} />
 				<LoansCard /> */}
       </div>
+      {openModal && <Modal closeModal={closeModal} />}
     </div>
   );
 }
