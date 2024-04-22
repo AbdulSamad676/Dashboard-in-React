@@ -4,6 +4,7 @@ import { createSlice, nanoid } from '@reduxjs/toolkit';
 const initialState = {
   uniData: [
     {
+      id: 1,
       cardLabel: 'Student Loan',
       labelBg: 'bg-orange-300',
       cardBorder: ' border-l-8 border-amber-500',
@@ -18,13 +19,15 @@ export const universitiesSlice = createSlice({
   initialState,
   reducers: {
     addUniversity: (state, action) => {
+      console.log('action called');
+
       const uni = {
         id: nanoid(),
         cardLabel: action.payload.cardLabel,
-        labelBg: 'bg-red-300',
-        cardBorder: ' border-l-8 border-amber-500',
-        date: '07/01/2021',
-        name: 'Cambridge University',
+        labelBg: action.payload.labelBg,
+        cardBorder: action.payload.cardBorder,
+        date: action.payload.date,
+        name: action.payload.name,
       };
       state.uniData.push(uni);
     },

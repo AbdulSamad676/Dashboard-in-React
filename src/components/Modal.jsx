@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import addUniversity from '../store/Slices/UniversitiesSlice/UniversitiesSlice';
 
 const Modal = ({ closeModal }) => {
   const [formData, setFormData] = useState({
@@ -9,6 +11,8 @@ const Modal = ({ closeModal }) => {
     date: '07/01/2021',
     name: 'Mukuba University',
   });
+
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,16 +28,15 @@ const Modal = ({ closeModal }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Create an object to store the form data
-    // const formDataObject = {
-    //   cardLabel: formData.cardLabel,
-    //   labelBg: formData.labelBg,
-    //   cardBorder: formData.cardBorder,
-    //   date: formData.date,
-    //   name: formData.name,
-    // };
-    // Handle the form data object, e.g., pass it to a function, send it to backend, etc.
-    console.log('user input data', formData); // You can replace console.log with any action you want to take
+    const formDataObject = {
+      cardLabel: formData.cardLabel,
+      labelBg: formData.labelBg,
+      cardBorder: formData.cardBorder,
+      date: formData.date,
+      name: formData.name,
+    };
+    dispatch(addUniversity(formDataObject)); // Dispatch the action with the form data object
+    console.log('user data sent', formDataObject);
     closeModal();
   };
 
