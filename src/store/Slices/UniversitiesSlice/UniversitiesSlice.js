@@ -31,11 +31,16 @@ export const UniversitiesSlice = createSlice({
       };
       state.uniData.push(uni);
     },
+    removeUniversity: (state, action) => {
+      state.uniData = state.uniData?.filter((item) => {
+        return item.id !== action.payload;
+      });
+    },
   },
 });
 
 // exporting individual actions through which we can modify
-export const { addUniversity } = UniversitiesSlice.actions;
+export const { addUniversity, removeUniversity } = UniversitiesSlice.actions;
 
 // Exporting all the reducers
 export default UniversitiesSlice.reducer;

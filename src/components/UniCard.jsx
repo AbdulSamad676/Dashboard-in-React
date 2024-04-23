@@ -1,15 +1,21 @@
-import { faCircleInfo, faFile } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCircleInfo,
+  faCircleXmark,
+  faFile,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { removeUniversity } from '../store/Slices/UniversitiesSlice/UniversitiesSlice';
 
 function UniCard({ data }) {
-  const { cardLabel, labelBg, cardBorder, date, name } = data;
-
+  const { cardLabel, labelBg, cardBorder, date, name, id } = data;
+  const dispatch = useDispatch();
   console.log('card data', data);
 
   return (
     <div
-      className={`rounded  my-5 py-3 secondary-bg drop-shadow-lg box-border ${cardBorder}`}
+      className={`rounded  my-5 py-5 secondary-bg drop-shadow-lg box-border relative ${cardBorder}`}
     >
       <div className='flex flex-wrap items-center justify-center sm:justify-between px-3'>
         <p
@@ -30,6 +36,14 @@ function UniCard({ data }) {
           Apply
         </button>
       </div>
+      <button
+        className='absolute top-0 right-1.5'
+        onClick={() => {
+          dispatch(removeUniversity(id));
+        }}
+      >
+        <FontAwesomeIcon icon={faCircleXmark} />
+      </button>
     </div>
   );
 }
