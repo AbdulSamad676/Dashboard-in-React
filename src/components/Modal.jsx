@@ -55,7 +55,8 @@ const Modal = ({ closeModal }) => {
                 value={formData.cardLabel}
                 onChange={handleChange}
                 className='mt-1 block w-full border-gray-300 p-1 
-                border rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
+                border rounded-md shadow-sm focus:ring-indigo-500
+                 focus:border-indigo-500 sm:text-sm'
               />
             </div>
             <div className='mb-4'>
@@ -67,8 +68,8 @@ const Modal = ({ closeModal }) => {
                 name='labelBg'
                 value={formData.labelBg}
                 onChange={handleChange}
-                className='mt-1 block w-full border-gray-300 p-1 
-                border rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
+                className={`mt-1 block w-full border-gray-300 p-1 border rounded-md shadow-sm focus:ring-indigo-500
+                 focus:border-indigo-500 sm:text-sm ${formData.labelBg}`}
               />
             </div>
             <div className='mb-4'>
@@ -80,8 +81,8 @@ const Modal = ({ closeModal }) => {
                 name='cardBorder'
                 value={formData.cardBorder}
                 onChange={handleChange}
-                className='mt-1 block w-full border-gray-300 p-1 
-                border rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
+                className={`mt-1 block w-full border-gray-300 p-1 border rounded-md shadow-sm focus:ring-indigo-500
+                 focus:border-indigo-500 sm:text-sm ${formData.cardBorder}`}
               />
             </div>
 

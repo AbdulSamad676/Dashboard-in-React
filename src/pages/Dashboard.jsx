@@ -12,7 +12,9 @@ function Dashboard() {
   const [openModal, setOpenModal] = useState(false);
   const reduxData = useSelector((state) => state.uniData);
 
-  // console.log('data from redux', reduxData);
+  // console.log('data from redux', reduxData[0].labelBg);
+  const bgType = reduxData[0].labelBg;
+  console.log('✅ typeof(bgType)    ', typeof bgType);
 
   function closeModal() {
     setOpenModal(false);
@@ -78,7 +80,7 @@ function Dashboard() {
         </div>
       </div>
       <div className='my-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-y-5 sm:gap-y-0 sm:gap-x-5 w-full md:w-11/12 sm:w-12/12 box-border '>
-        {uniData?.map((item) => {
+        {reduxData?.map((item) => {
           return <UniCard key={item.key} data={item} />;
         })}
 
