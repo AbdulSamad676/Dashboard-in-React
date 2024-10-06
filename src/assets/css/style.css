@@ -1,45 +1,51 @@
 .bg-primary {
-	background-color: #4953cf !important;
+  background-color: #4953cf !important;
 }
 .primary {
-	color: #4953cf !important ;
+  color: #4953cf !important ;
 }
 .icons {
-	/* border: 1px solid black; */
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	color: #4953cf !important;
-	background-color: white;
-	border-radius: 0.25rem;
+  /* border: 1px solid black; */
+  cursor: pointer;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* flex-direction: column; */
+  color: #4953cf !important;
+  background-color: white;
+  border-radius: 0.25rem;
+  gap: 10px;
+}
+.icons:hover {
+  color: white !important;
+  border: 1px solid white;
+  background-color: #4953cf !important;
 }
 .icons:focus {
-	background-color: rgb(226, 226, 214);
+  background-color: rgb(226, 226, 214);
 }
 /* Header */
 
 .secondary-bg {
-	background-color: #ffffff;
-	/* box-shadow: #000000; */
-	box-sizing: border-box !important;
+  background-color: #ffffff;
+  /* box-shadow: #000000; */
+  box-sizing: border-box !important;
 }
 .single-chat {
-	height: 20rem;
+  height: 20rem;
 }
 .chat-section {
-	height: 91vh !important;
-	/* border: 1px solid black; */
+  height: 91vh !important;
+  /* border: 1px solid black; */
 }
 .chat-body {
-	height: 22rem;
+  height: 22rem;
 }
 
 @media screen and (max-width: 575.98px) {
-	/* .chat-section {
+  /* .chat-section {
 		height: 99vh !important;
 		border: 1px solid black;
 	} */
-	/* CSS rules for screens less than 576 pixels wide */
+  /* CSS rules for screens less than 576 pixels wide */
 }
