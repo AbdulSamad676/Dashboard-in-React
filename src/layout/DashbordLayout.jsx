@@ -5,7 +5,7 @@ import Sidebar from "../components/Sidebar";
 const DashboardLayout = ({ children, title }) => {
   return (
     <div className="grid grid-cols-12">
-      <div className="col-span-2 bg-primary h-full flex justify-center ">
+      <div className="col-span-2 bg-primary h-full min-h-[100vh] flex justify-center ">
         <Sidebar />
       </div>
 
