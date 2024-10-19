@@ -33,18 +33,18 @@ function ChatBody({ data }) {
             </p>
           </div>
         </div>
-        <div className="icons-section py-2 flex justify-end  w-full ">
+        <div className="icons-section py-2 flex justify-end  w-full pr-3 ">
           <FontAwesomeIcon
-            className="text-gray-300 text-xl ml-3"
+            className="text-gray-300 text-xl ml-3 hover:text-[#4953cf] cursor-pointer"
             icon={faPhone}
           />
           <FontAwesomeIcon
-            className="text-gray-300 text-xl ml-3"
+            className="text-gray-300 text-xl ml-3 hover:text-[#4953cf] cursor-pointer"
             icon={faVideo}
           />
 
           <FontAwesomeIcon
-            className="text-gray-300 text-xl ml-3"
+            className="text-gray-300 text-xl ml-3 hover:text-[#4953cf] cursor-pointer"
             icon={faEllipsis}
           />
         </div>
