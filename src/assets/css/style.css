@@ -32,7 +32,7 @@
   box-sizing: border-box !important;
 }
 .single-chat {
-  height: 20rem;
+  height: auto !important;
 }
 .chat-section {
   height: 91vh !important;

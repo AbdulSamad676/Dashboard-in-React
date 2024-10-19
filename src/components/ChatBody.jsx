@@ -6,9 +6,9 @@ import {
   faPaperPlane,
   faPhone,
   faVideo,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 // import Img1 from '../assets/images/single1.png';
 function ChatBody({ data }) {
   //   console.log('✅ msgsArray in chat body    ', data);
@@ -20,31 +20,31 @@ function ChatBody({ data }) {
       <div
         className={` conversation-header flex justify-between items-center  p-1 sm:py-1 sm:px-2 mx-1 sm:mx-0 rounded sm:w-full drop-shadow-lg secondary-bg `}
       >
-        <div className='profile-section w-full flex items-center '>
-          <div className='sm:mx-3'>
-            <img src={profileImg} width='auto' alt='chat profile' />
+        <div className="profile-section w-full flex items-center ">
+          <div className="sm:mx-3">
+            <img src={profileImg} width="auto" alt="chat profile" />
           </div>
-          <div className=' flex flex-col justify-between w-full'>
-            <p className='text-md font-semibold mb-1'>{name}</p>
+          <div className=" flex flex-col justify-between w-full">
+            <p className="text-md font-semibold mb-1">{name}</p>
 
-            <p className='text-xs text-justify'>
-              Last Seen :{' '}
-              <span className='mx-2 font-semibold text-gray-400'>4:45</span>
+            <p className="text-xs text-justify">
+              Last Seen :{" "}
+              <span className="mx-2 font-semibold text-gray-400">4:45</span>
             </p>
           </div>
         </div>
-        <div className='icons-section py-2 flex justify-end  w-full '>
+        <div className="icons-section py-2 flex justify-end  w-full ">
           <FontAwesomeIcon
-            className='text-gray-300 text-xl ml-3'
+            className="text-gray-300 text-xl ml-3"
             icon={faPhone}
           />
           <FontAwesomeIcon
-            className='text-gray-300 text-xl ml-3'
+            className="text-gray-300 text-xl ml-3"
             icon={faVideo}
           />
 
           <FontAwesomeIcon
-            className='text-gray-300 text-xl ml-3'
+            className="text-gray-300 text-xl ml-3"
             icon={faEllipsis}
           />
         </div>
@@ -54,24 +54,24 @@ function ChatBody({ data }) {
 
       {/* Chat Body Start */}
 
-      <div className='  h-80   mt-3 px-2 py-1 overflow-auto'>
-        <p className='text-center text-sm text-gray-400'>
-          today <span className='font-semibold'>4:45</span>{' '}
+      <div className="  h-full   mt-3 px-2 py-1 overflow-auto bg-gray-100 rounded-sm">
+        <p className="text-center text-sm text-gray-400">
+          today <span className="font-semibold">4:45</span>{" "}
         </p>
         {textArray?.map((msg) => {
           return (
             <div
               className={`w-full ${
-                msg.status === 'send'
-                  ? 'flex justify-end'
-                  : 'flex justify-start'
+                msg.status === "send"
+                  ? "flex justify-end"
+                  : "flex justify-start"
               }`}
             >
               <div
                 className={`sms w-max max-w-48  my-1 p-1 rounded ${
-                  msg.status === 'send'
-                    ? 'bg-primary text-white'
-                    : 'bg-gray-100 text-black'
+                  msg.status === "send"
+                    ? "bg-primary text-white"
+                    : "bg-gray-100 text-black"
                 }`}
               >
                 {msg.text}
@@ -84,31 +84,31 @@ function ChatBody({ data }) {
       {/* Chat Body End */}
 
       {/* Chat Footer */}
-      <div className='chat-footer flex justify-center items-center p-2 drop-shadow-lg secondary-bg'>
-        <div className=' w-full grid grid-cols-12  rounded-lg bg-gray-100 px-3 py-2'>
-          <div className='col-span-9 flex mx-3 items-center '>
+      <div className="chat-footer flex justify-center items-center p-2 drop-shadow-lg secondary-bg">
+        <div className=" w-full grid grid-cols-12  rounded-lg bg-gray-100 px-3 py-2">
+          <div className="col-span-9 flex mx-3 items-center ">
             <FontAwesomeIcon
-              className='text-sm text-gray-500'
+              className="text-sm text-gray-500"
               icon={faPaperclip}
             />
 
             <input
-              className='text-xs text-gray-500 mx-5 w-full bg-transparent border-none outline-none focus:ring-0'
-              placeholder='Type Message Here'
-              type='text'
+              className="text-xs text-gray-500 mx-5 w-full bg-transparent border-none outline-none focus:ring-0"
+              placeholder="Type Message Here"
+              type="text"
             />
           </div>
-          <div className='col-span-3 flex justify-end items-center'>
+          <div className="col-span-3 flex justify-end items-center">
             <FontAwesomeIcon
-              className='text-sm mx-1 text-gray-500'
+              className="text-sm mx-1 text-gray-500"
               icon={faFaceSmile}
             />
             <FontAwesomeIcon
-              className='text-sm mx-1 text-gray-500'
+              className="text-sm mx-1 text-gray-500"
               icon={faMicrophone}
             />
             <FontAwesomeIcon
-              className='text-sm mx-1 text-blue-500'
+              className="text-sm mx-1 text-blue-500"
               icon={faPaperPlane}
             />
           </div>
