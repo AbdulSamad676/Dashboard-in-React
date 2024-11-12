@@ -29,7 +29,7 @@ function ChatBody({ data }) {
 
             <p className="text-xs text-justify">
               Last Seen :{" "}
-              <span className="mx-2 font-semibold text-gray-400">4:45</span>
+              <span className="mx-2 font-semibold text-gray-600">4:45</span>
             </p>
           </div>
         </div>
