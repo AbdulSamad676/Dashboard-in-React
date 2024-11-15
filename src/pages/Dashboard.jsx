@@ -13,7 +13,7 @@ function Dashboard() {
   const reduxData = useSelector((state) => state.uniData);
 
   // console.log('data from redux', reduxData[0].labelBg);
-  const bgType = reduxData[0].labelBg;
+  // const bgType = reduxData[0].labelBg;
   console.log('✅ typeof(bgType)    ', typeof bgType);
 
   function closeModal() {
