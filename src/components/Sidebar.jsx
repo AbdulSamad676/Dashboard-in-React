@@ -26,7 +26,7 @@ function Sidebar() {
 			 gap-3 mb-10"
       >
         <Link to="/dashboard">
-          <div className="icons p-2 bg-white dark:bg-gray-600 ">
+          <div className="icons p-2 bg-white dark:bg-gray-800 ">
             <FontAwesomeIcon
               className="text-xl lg:text-lg text-[#4953cf] dark:text-white"
               icon={faTableCellsLarge}
@@ -35,19 +35,19 @@ function Sidebar() {
           </div>
         </Link>
         <Link to="/chat">
-          <div className="icons p-2 bg-white dark:bg-gray-600">
+          <div className="icons p-2 bg-white dark:bg-gray-800">
             <FontAwesomeIcon className="text-xl lg:text-lg text-[#4953cf] dark:text-white" icon={faMessage} />
             <p className="text-xs hidden lg:block  font-normal text-[#4953cf] dark:text-white">Chat</p>
           </div>
         </Link>
         <Link to="/user">
-          <div className="icons p-2 hover:bg-[#4953cf] bg-white dark:bg-gray-600">
+          <div className="icons p-2 hover:bg-[#4953cf] bg-white dark:bg-gray-800">
             <FontAwesomeIcon className="text-xl lg:text-lg text-[#4953cf] dark:text-white" icon={faUser} />
             <p className="text-xs hidden lg:block  font-normal text-[#4953cf] dark:text-white">User</p>
           </div>
         </Link>
         <Link to="/help">
-          <div className="icons p-2 bg-white dark:bg-gray-600">
+          <div className="icons p-2 bg-white dark:bg-gray-800">
             <FontAwesomeIcon
               className="text-xl lg:text-lg text-[#4953cf] dark:text-white"
               icon={faCircleQuestion}

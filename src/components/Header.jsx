@@ -23,7 +23,7 @@ function Header({ title }) {
       Your Profile Complete ratio: <span className="font-semibold">80%</span>
     </p>
     <div className="bg-gray-100 rounded h-2 mx-3 dark:bg-gray-700">
-      <div className="bg-green-500 w-10/12 text-xs text-center rounded text-white h-2"></div>
+      <div className="bg-green-500 dark:bg-white w-10/12 text-xs text-center rounded text-white h-2"></div>
     </div>
   </div>
   <div className="flex justify-center items-center p-1 rounded col-span-3">
@@ -31,7 +31,7 @@ function Header({ title }) {
           onClick={() => dispatch(toggleTheme())}
           className="text-xl dark:text-white mx-3"
         >
-          <FontAwesomeIcon icon={darkMode ? faSun : faMoon} />
+          <FontAwesomeIcon className="dark:text-yellow-400" icon={darkMode ? faSun : faMoon} />
         </button>
     <FontAwesomeIcon
       className="mx-3  text-lg cursor-pointer text-[#4953cf] dark:text-white"

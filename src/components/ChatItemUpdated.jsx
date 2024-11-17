@@ -203,15 +203,15 @@ function ChatItemUpdated() {
       <div className=" p-1 col-span-12  sm:col-span-5 h-auto px-3">
         {/* Chat Items Section Start */}
         <div className="flex justify-between px-5 items-center">
-          <p>Chats</p>
-          <FontAwesomeIcon className="primary text-xl" icon={faCirclePlus} />
+          <p className="dark:text-white">Chats</p>
+          <FontAwesomeIcon className="text-[#4953cf] dark:text-white text-xl" icon={faCirclePlus} />
         </div>
-        <div className="flex justify-between m-5 text-sm font-thin px-3">
+        <div className="flex justify-between m-5 text-sm font-thin px-3 dark:text-white">
           <button className="focus:text-blue-500">Direct</button>
           <button className="focus:text-blue-500">Departments</button>
           <button className="focus:text-blue-500">Alerts</button>
         </div>
-        <div className="flex items-center m-3 rounded-lg bg-gray-100 px-1 py-1">
+        <div className="flex items-center m-3 rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-gray-300 px-1 py-1">
           <FontAwesomeIcon icon={faMagnifyingGlass} className="mx-3" />
           <p className="">Search</p>
         </div>

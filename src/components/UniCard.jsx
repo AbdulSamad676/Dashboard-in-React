@@ -15,24 +15,24 @@ function UniCard({ data }) {
 
   return (
     <div
-      className={`rounded  my-5 py-5 secondary-bg drop-shadow-lg box-border relative ${cardBorder}`}
+      className={`rounded  my-5 py-5 secondary-bg dark:bg-gray-800 drop-shadow-lg box-border relative ${cardBorder}`}
     >
       <div className='flex flex-wrap items-center justify-center sm:justify-between px-3'>
         <p
-          className={`text-xs m-0 rounded-lg py-1 px-2 text-center ${labelBg}`}
+          className={`text-xs m-0 rounded-lg py-1 px-2 text-center ${labelBg} dark:bg-gray-700 dark:text-white`}
         >
           {cardLabel}
         </p>
-        <p className='m-0 text-xs  text-red-700 font-semibold'>
-          <span className='px-2 text-gray-500 '>Closes:</span> {date}
+        <p className='m-0 text-xs  text-red-700 dark:text-white font-semibold'>
+          <span className='px-2 text-gray-500 dark:text-white '>Closes:</span> {date}
         </p>
       </div>
-      <h1 className='my-3 text-xl text-center font-semibold uppercase'>
+      <h1 className='my-3 text-xl text-center font-semibold uppercase dark:text-amber-500'>
         {name}
       </h1>
       <div className='flex justify-between items-center mx-3'>
-        <FontAwesomeIcon className='primary text-xl' icon={faCircleInfo} />
-        <button className='bg-primary text-xs px-5 py-1 text-white font-semibold rounded'>
+        <FontAwesomeIcon className='text-[#4953cf] dark:text-white text-xl' icon={faCircleInfo} />
+        <button className=' text-xs px-5 py-1 text-white font-semibold rounded bg-[#4953cf] dark:bg-gray-700 dark:text-white'>
           Apply
         </button>
       </div>
@@ -42,7 +42,7 @@ function UniCard({ data }) {
           dispatch(removeUniversity(id));
         }}
       >
-        <FontAwesomeIcon icon={faCircleXmark} />
+        <FontAwesomeIcon className='text-red-600 dark:text-white' icon={faCircleXmark} />
       </button>
     </div>
   );
