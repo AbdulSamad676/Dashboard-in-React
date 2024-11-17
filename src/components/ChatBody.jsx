@@ -18,18 +18,18 @@ function ChatBody({ data }) {
       {/* conversation Header Start */}
 
       <div
-        className={` conversation-header flex justify-between items-center  p-1 sm:py-1 sm:px-2 mx-1 sm:mx-0 rounded sm:w-full drop-shadow-lg secondary-bg `}
+        className={` conversation-header dark:bg-gray-800 flex justify-between items-center  p-1 sm:py-1 sm:px-2 mx-1 sm:mx-0 rounded sm:w-full drop-shadow-lg secondary-bg `}
       >
         <div className="profile-section w-full flex items-center ">
           <div className="sm:mx-3">
             <img src={profileImg} width="auto" alt="chat profile" />
           </div>
           <div className=" flex flex-col justify-between w-full">
-            <p className="text-md font-semibold mb-1">{name}</p>
+            <p className="text-md font-semibold mb-1 dark:text-white">{name}</p>
 
-            <p className="text-xs text-justify">
+            <p className="text-xs text-justify dark:text-blue-500">
               Last Seen :{" "}
-              <span className="mx-2 font-semibold text-gray-600">4:45</span>
+              <span className="mx-2 font-semibold text-gray-600 dark:text-blue-500">4:45</span>
             </p>
           </div>
         </div>
@@ -54,8 +54,8 @@ function ChatBody({ data }) {
 
       {/* Chat Body Start */}
 
-      <div className="  h-full   mt-3 px-2 py-1 overflow-auto bg-gray-100 rounded-sm">
-        <p className="text-center text-sm text-gray-400">
+      <div className="  h-full   mt-3 px-2 py-1 overflow-auto bg-gray-100 dark:bg-gray-900 rounded-sm">
+        <p className="text-center text-sm text-gray-400 dark:text-white">
           today <span className="font-semibold">4:45</span>{" "}
         </p>
         {textArray?.map((msg) => {
@@ -68,9 +68,9 @@ function ChatBody({ data }) {
               }`}
             >
               <div
-                className={`sms w-max max-w-48  my-1 p-1 rounded ${
+                className={`sms w-max max-w-48  my-1 p-2 rounded text-sm ${
                   msg.status === "send"
-                    ? "bg-primary text-white"
+                    ? "bg-[#4953cf] dark:bg-gray-800 text-white"
                     : "bg-gray-100 text-black"
                 }`}
               >
@@ -84,8 +84,8 @@ function ChatBody({ data }) {
       {/* Chat Body End */}
 
       {/* Chat Footer */}
-      <div className="chat-footer flex justify-center items-center p-2 drop-shadow-lg secondary-bg">
-        <div className=" w-full grid grid-cols-12  rounded-lg bg-gray-100 px-3 py-2">
+      <div className="chat-footer flex justify-center items-center p-2 drop-shadow-lg secondary-bg dark:bg-black">
+        <div className=" w-full grid grid-cols-12  rounded-lg bg-gray-100 dark:bg-gray-900 px-3 py-2">
           <div className="col-span-9 flex mx-3 items-center ">
             <FontAwesomeIcon
               className="text-sm text-gray-500"
