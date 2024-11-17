@@ -5,6 +5,7 @@ import User from '../src/pages/User';
 import Dashboard from '../src/pages/Dashboard';
 import LoginPage from '../src/pages/LoginPage';
 import Help from '../src/pages/Help';
+import SignUp from '../src/components/Signup';
 // import AuthLayout from '';
 // import DashboardLayout from '../layouts/DashboardLayout';
 
@@ -12,6 +13,11 @@ export const routesConfig = [
   {
     path: '/',
     component: LoginPage,
+    layout: AuthLayout,
+  },
+  {
+    path: '/sign-up',
+    component: SignUp,
     layout: AuthLayout,
   },
   // {
