@@ -231,8 +231,7 @@ function ChatItemUpdated() {
       {/* chat conversation */}
       <div className=" p-1 flex flex-col justify-between col-span-12 sm:col-span-7">
         <ChatBody data={singleItems?.find((item) => item.isActive)} />
-        {/* {singleItems?.find((item) => item.isActive)} */}
-        {/* <ChatBody data={singleItems[0]} /> */}
+      
       </div>
     </>
   );

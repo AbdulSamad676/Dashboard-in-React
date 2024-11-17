@@ -41,8 +41,8 @@ function Sidebar() {
           </div>
         </Link>
         <Link to="/user">
-          <div className="icons p-2 hover:bg-[#4953cf] bg-white dark:bg-gray-800">
-            <FontAwesomeIcon className="text-xl lg:text-lg text-[#4953cf] dark:text-white" icon={faUser} />
+          <div className="icons p-2   bg-white dark:bg-gray-800">
+            <FontAwesomeIcon className="text-xl lg:text-lg text-[#4953cf]  dark:text-white" icon={faUser} />
             <p className="text-xs hidden lg:block  font-normal text-[#4953cf] dark:text-white">User</p>
           </div>
         </Link>

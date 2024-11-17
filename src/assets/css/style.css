@@ -5,24 +5,17 @@
   color: #4953cf !important ;
 }
 .icons {
-  /* border: 1px solid black; */
   cursor: pointer;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
-  /* flex-direction: column; */
   color: #4953cf !important;
   background-color: white;
   border-radius: 0.25rem;
   gap: 10px;
 }
-.icons:hover {
-  color: white !important;
-  border: 1px solid white;
-  background-color: #4953cf !important;
-}
-.icons:focus {
-  background-color: rgb(226, 226, 214);
+
+.icons:hover{
+  background-color:rgba(232, 232, 232, 0.728)!important;
 }
 /* Header */
 
