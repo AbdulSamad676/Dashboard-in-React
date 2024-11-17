@@ -7,7 +7,7 @@ function User() {
         <h2 className='text-2xl font-semibold'>User Profile</h2>
       </div>
       <div className='profile-row grid grid-cols-12 md:grid-cols-11 my-5 gap-x-5'>
-        <div className='w-auto flex jusitfy-center flex-col gap-3 items-center profile col-span-4 md:col-span-3 py-4 box-border secondary-bg drop-shadow-lg rounded'>
+        <div className='w-auto flex jusitfy-center flex-col gap-3 items-center profile col-span-4 md:col-span-3 py-4 box-border secondary-bg dark:bg-gray-900 drop-shadow-lg rounded'>
           <div className='profileImg'>
             <img
               className='w-20 md:w-32 h-20 md:h-32'
@@ -15,14 +15,15 @@ function User() {
               alt=''
             />
           </div>
-          <button className=' w-max p-2 md:px-5 md:uppercase py-1 w-auto text-xs border border-blue-600 rounded hover:bg-blue-600 hover:text-white'>
+          <button className=' w-max p-2 md:px-5 md:uppercase py-1 w-auto text-xs border
+           border-blue-600 dark:border-white   rounded hover:bg-blue-600 hover:text-white dark:text-white'>
             Change Profile Photo
           </button>
-          <p className=' text-xs text-center'>
-            Registration Date: <span className='font-bold'>20 June,2020</span>
+          <p className=' text-xs text-center dark:text-white'>
+            Registration Date: <span className='font-bold '>20 June,2020</span>
           </p>
         </div>
-        <div className='profile col-span-8 md:col-span-7 secondary-bg px-2 drop-shadow-lg rounded p-4'>
+        <div className='profile col-span-8 md:col-span-7 secondary-bg dark:bg-gray-900 dark:text-white px-2 drop-shadow-lg rounded p-4'>
           <div className='dataHeader flex justify-between px-3 mb-5'>
             <p>Personal Information</p>
             <button className='px-5 uppercase py-1 w-auto text-xs border border-blue-600 rounded hover:bg-blue-600 hover:text-white'>
