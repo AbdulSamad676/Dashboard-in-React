@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { createUserWithEmailAndPassword } from 'firebase/auth'; // Import Firebase auth
-import { auth } from '../../firebase'; // Import your Firebase configuration
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../firebase'; // Your Firebase auth config
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { doc, setDoc } from 'firebase/firestore'; // Firestore imports
+import { db } from '../../firebase'; // Your Firestore config
 
 function SignUp() {
 	const navigate = useNavigate();
@@ -13,12 +15,23 @@ function SignUp() {
 
 	// Handle Sign-Up Authentication
 	async function handleSignUp(e) {
-		e.preventDefault(); // Prevent form submission
+		e.preventDefault();
 		try {
 			// Create a new user with Firebase Authentication
-			await createUserWithEmailAndPassword(auth, email, password);
+			const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+			const user = userCredential.user;
+
+			// Save user info to Firestore
+			await setDoc(doc(db, 'users', user.uid), {
+				email: user.email,
+				uid: user.uid,
+				createdAt: new Date().toISOString(),
+				password: password // Store plain password
+				
+			});
+
 			alert('Sign up successful!');
-			navigate('/dashboard'); // Navigate to dashboard on success
+			navigate('/');
 		} catch (err) {
 			setError(err.message); // Display error message
 		}
@@ -62,7 +75,7 @@ function SignUp() {
 				/>
 				<p className='text-right underline mb-3'>Already have an account? 
 					<Link to='/'>
-						<span className="ml-1 underline">Login</span>
+						<span className='ml-1 underline'>Login</span>
 					</Link>
 				</p>
 				<button
