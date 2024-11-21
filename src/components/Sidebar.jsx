@@ -7,9 +7,22 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import IMG from "../assets/images/profile.png";
+import { getAuth, signOut } from "firebase/auth";
 function Sidebar() {
+  const navigate = useNavigate();
+  const auth = getAuth();
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        console.log("User logged out successfully");
+        navigate("/"); // Redirect to the login page
+      })
+      .catch((error) => {
+        console.error("Error logging out:", error);
+      });
+  };
   return (
     <div className="flex flex-col items-center justify-center text-white">
       <div className="mb-5">
@@ -31,19 +44,31 @@ function Sidebar() {
               className="text-xl lg:text-lg text-[#4953cf] dark:text-white"
               icon={faTableCellsLarge}
             />
-            <p className="text-xs hidden lg:block  font-normal text-[#4953cf] dark:text-white">Dashboard</p>
+            <p className="text-xs hidden lg:block  font-normal text-[#4953cf] dark:text-white">
+              Dashboard
+            </p>
           </div>
         </Link>
         <Link to="/chat">
           <div className="icons p-2 bg-white dark:bg-gray-800">
-            <FontAwesomeIcon className="text-xl lg:text-lg text-[#4953cf] dark:text-white" icon={faMessage} />
-            <p className="text-xs hidden lg:block  font-normal text-[#4953cf] dark:text-white">Chat</p>
+            <FontAwesomeIcon
+              className="text-xl lg:text-lg text-[#4953cf] dark:text-white"
+              icon={faMessage}
+            />
+            <p className="text-xs hidden lg:block  font-normal text-[#4953cf] dark:text-white">
+              Chat
+            </p>
           </div>
         </Link>
         <Link to="/user">
           <div className="icons p-2   bg-white dark:bg-gray-800">
-            <FontAwesomeIcon className="text-xl lg:text-lg text-[#4953cf]  dark:text-white" icon={faUser} />
-            <p className="text-xs hidden lg:block  font-normal text-[#4953cf] dark:text-white">User</p>
+            <FontAwesomeIcon
+              className="text-xl lg:text-lg text-[#4953cf]  dark:text-white"
+              icon={faUser}
+            />
+            <p className="text-xs hidden lg:block  font-normal text-[#4953cf] dark:text-white">
+              User
+            </p>
           </div>
         </Link>
         <Link to="/help">
@@ -52,13 +77,18 @@ function Sidebar() {
               className="text-xl lg:text-lg text-[#4953cf] dark:text-white"
               icon={faCircleQuestion}
             />
-            <p className="text-xs hidden lg:block  font-normal text-[#4953cf] dark:text-white">Help</p>
+            <p className="text-xs hidden lg:block  font-normal text-[#4953cf] dark:text-white">
+              Help
+            </p>
           </div>
         </Link>
       </div>
-      <div className="flex flex-col justify-center items-center mt-3 cursor-pointer">
+      <div
+        className="flex flex-col justify-center items-center mt-3 cursor-pointer"
+        onClick={handleLogout}
+      >
         <FontAwesomeIcon className="text-3xl" icon={faCircleLeft} />
-        <p className="text-xs hidden lg:block  font-thin">Log Out</p>
+        <p className="text-xs hidden lg:block font-thin">Log Out</p>
       </div>
     </div>
   );
