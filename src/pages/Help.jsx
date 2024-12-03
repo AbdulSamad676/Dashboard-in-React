@@ -53,7 +53,7 @@ function Help() {
       {faqs.map((faq) => (
         <div
           key={faq.id}
-          className="singleQuestion flex flex-col p-2 w-5/6 secondary-bg dark:bg-gray-800 shadow-lg mb-4"
+          className="singleQuestion flex flex-col p-2 w-5/6 secondary-bg dark:bg-gray-800 shadow-lg mb-4 rounded-md"
         >
           <div className="question flex justify-between items-center">
             <p className="font-semibold dark:text-gray-300">{faq.question}</p>
@@ -66,7 +66,7 @@ function Help() {
             />
           </div>
           {activeId === faq.id && (
-            <div className="answer mt-2 border dark:border-gray-700 p-1 dark:text-gray-300">
+            <div className="answer mt-2 border dark:border-gray-700 p-1 dark:text-gray-400">
               {faq.answer}
             </div>
           )}
