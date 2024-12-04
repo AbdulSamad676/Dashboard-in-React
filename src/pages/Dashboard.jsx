@@ -101,7 +101,6 @@
 
 // export default Dashboard;
 
-
 import { faFile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
@@ -141,7 +140,7 @@ function Dashboard() {
   ];
 
   return (
-    <div className="w-12/12  m-5 bg-blue-100 dark:bg-gray-900 rounded-lg py-2 pb-5 px-5">
+    <div className="w-12/12  bg-blue-100 dark:bg-gray-900 rounded-lg py-2 pb-5 px-5">
       <div className="loans-row my-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-y-5 sm:gap-y-0 sm:gap-x-5 w-full sm:w-10/12 box-border ">
         {loanData.map((item, index) => (
           <LoansCard key={index} data={item} />
@@ -154,15 +153,16 @@ function Dashboard() {
           </p>
         </div>
         <div className="flex items-center justify-center secondary-bg dark:bg-gray-800 drop-shadow-lg w-full sm:w-6/12 md:w-4/12 p-2">
-          <FontAwesomeIcon className=" mr-3 text-[#4953cf] dark:text-white" icon={faFile} />
+          <FontAwesomeIcon
+            className=" mr-3 text-[#4953cf] dark:text-white"
+            icon={faFile}
+          />
           <p className="p-0 m-0 text-sm dark:text-white"> Download Statement</p>
         </div>
       </div>
       <div className="my-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-y-5 sm:gap-y-0 sm:gap-x-5 w-full md:w-11/12 sm:w-12/12 box-border ">
         {reduxData.length > 0 ? (
-          reduxData.map((item) => (
-            <UniCard key={item.id} data={item} />
-          ))
+          reduxData.map((item) => <UniCard key={item.id} data={item} />)
         ) : (
           <p>No universities available. Add one using the button below.</p>
         )}
