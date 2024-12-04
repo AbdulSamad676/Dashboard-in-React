@@ -204,7 +204,10 @@ function ChatItemUpdated() {
         {/* Chat Items Section Start */}
         <div className="flex justify-between px-5 items-center">
           <p className="dark:text-white">Chats</p>
-          <FontAwesomeIcon className="text-[#4953cf] dark:text-white text-xl" icon={faCirclePlus} />
+          <FontAwesomeIcon
+            className="text-[#4953cf] dark:text-white text-xl"
+            icon={faCirclePlus}
+          />
         </div>
         <div className="flex justify-between m-5 text-sm font-thin px-3 dark:text-white">
           <button className="focus:text-blue-500">Direct</button>
@@ -231,7 +234,6 @@ function ChatItemUpdated() {
       {/* chat conversation */}
       <div className=" p-1 flex flex-col justify-between col-span-12 sm:col-span-7">
         <ChatBody data={singleItems?.find((item) => item.isActive)} />
-      
       </div>
     </>
   );

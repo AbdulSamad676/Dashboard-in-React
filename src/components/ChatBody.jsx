@@ -21,15 +21,19 @@ function ChatBody({ data }) {
         className={` conversation-header dark:bg-gray-800 flex justify-between items-center  p-1 sm:py-1 sm:px-2 mx-1 sm:mx-0 rounded sm:w-full drop-shadow-lg secondary-bg `}
       >
         <div className="profile-section w-full flex items-center ">
-          <div className="sm:mx-3">
+          <div className=" sm:mx-3 ">
             <img src={profileImg} width="auto" alt="chat profile" />
           </div>
-          <div className=" flex flex-col justify-between w-full">
-            <p className="text-md font-semibold mb-1 dark:text-white">{name}</p>
+          <div className=" flex flex-col justify-between w-full ml-3">
+            <p className=" text:xs sm:text-md  font-semibold mb-1 dark:text-white ">
+              {name}
+            </p>
 
             <p className="text-xs text-justify dark:text-blue-500">
               Last Seen :{" "}
-              <span className="mx-2 font-semibold text-gray-600 dark:text-blue-500">4:45</span>
+              <span className="mx-2 font-semibold text-gray-600 dark:text-blue-500">
+                4:45
+              </span>
             </p>
           </div>
         </div>

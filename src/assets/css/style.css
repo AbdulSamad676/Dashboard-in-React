@@ -14,8 +14,8 @@
   gap: 10px;
 }
 
-.icons:hover{
-  background-color:rgba(232, 232, 232, 0.728)!important;
+.icons:hover {
+  background-color: rgba(232, 232, 232, 0.728) !important;
 }
 /* Header */
 
@@ -36,9 +36,9 @@
 }
 
 @media screen and (max-width: 575.98px) {
-  /* .chat-section {
-		height: 99vh !important;
-		border: 1px solid black;
-	} */
+  .chat-section {
+    height: 100% !important;
+    /* border: 1px solid black; */
+  }
   /* CSS rules for screens less than 576 pixels wide */
 }
